@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Clone - OTP Verification</title>
+    <link rel="icon" href="Pictures/icon.jpg">
+    <link rel="stylesheet" href="Signin.css">
+</head>
+<body>
+    <center>
+        <div class="container">
+            <div class="login-box">
+                <form>
+                    <img src="Pictures/swiggy.png" height="80px" width="70px" class="logo" alt="">
+                    <h2>SWIGGY</h2>
+                    <a class="text">Enter your OTP</a><br><br>
+                    <div class="input-field">
+                        OTP: <input type="tel" placeholder="6 Digit OTP" class="num" id="otpInput" maxlength="6">
+                        <hr class="line">
+                    </div>
+                    <div class="input-field">
+                        <button type="button" onclick="redirectToAnotherPage()">Login</button>
+                    </div>
+                </form>
+                <footer align="center">
+                    <div class="terms">
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <a>By continuing, you agree for our <a href="#" class="link">Terms & Conditions, Privacy Policy</a>, and Promotional T&C</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </center>
+    <script>
+        function redirectToAnotherPage() {
+            var otpInput = document.getElementById("otpInput").value;
+            if (otpInput !== "") {
+                if (otpInput.length === 6) {
+                    window.location.href = "Homepage.html";
+                } else {
+                    alert("Please enter a valid 6-digit OTP.");
+                }
+            } else {
+                alert("Please fill the OTP.");
+            }
+        }
+    </script>
+</body>
+</html>

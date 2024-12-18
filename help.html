@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Food on Swiggy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #efc074;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .help {
+            color: #fa8117;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .ques {
+            text-align: left;
+            background-color: #FFE0B2;
+            border: 1px solid #d27f21;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .ques:hover {
+            background-color: #FFCC80;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 0;
+            color: #E65100;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .ask-help {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ask-help h3 {
+            font-size: 24px;
+            color: #f8770e;
+            margin-bottom: 10px;
+        }
+
+        .ask-help form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ask-help input, .ask-help textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .ask-help button {
+            padding: 10px 20px;
+            background-color: #f57018;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .ask-help button:hover {
+            background-color: #fb900d;
+        }
+
+        .message {
+            background-color: #fb900d;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="help">
+            <h1><b><center>FAQs</center></b></h1>
+        </div>
+        <div class="ques">
+            <h3>Can I edit my order?</h3>
+            <p>Your order can be edited before it reaches the restaurant. You could contact customer support team via chat or call to do so. Once the order is placed and the restaurant starts preparing your food, you may not edit its contents.</p>
+        </div>
+        <div class="ques">
+            <h3>I want to cancel my order</h3>
+            <p>We will do our best to accommodate your request if the order is not placed to the restaurant (Customer service number: 080-67466729). Please note that we will have a right to charge a cancellation fee up to the full order value to compensate our restaurant and delivery partners if your order has been confirmed.</p>
+        </div>
+        <div class="ques">
+            <h3>Will Swiggy be accountable for quality/quantity?</h3>
+            <p>Quantity and quality of the food is the restaurant's responsibility. However, in case of issues with the quality or quantity, kindly submit your feedback and we will pass it on to the restaurant.</p>
+        </div>
+        <div class="ques">
+            <h3>Is there a minimum order value?</h3>
+            <p>We have no minimum order value and you can order for any amount.</p>
+        </div>
+        <div class="ques">
+            <h3>Do you charge for delivery?</h3>
+            <p>Delivery fee varies from city to city and is applicable if the order value is below a certain amount. Additionally, certain restaurants might have fixed delivery fees. Delivery fee (if any) is specified on the 'Review Order' page.</p>
+        </div>
+        <div class="ques">
+            <h3>How long do you take to deliver?</h3>
+            <p>Standard delivery times vary by the location selected and prevailing conditions. Once you select your location, an estimated delivery time is mentioned for each restaurant.</p>
+        </div>
+        <div class="ques">
+            <h3>What are your delivery hours?</h3>
+            <p>Our delivery hours vary for different locations and depend on the availability of supply from restaurant partners.</p>
+        </div>
+        <div class="ques">
+            <h3>Do you support bulk orders?</h3>
+            <p>In order to provide all customers with a great selection and to ensure on-time delivery of your meal, we reserve the right to limit the quantities depending on supply.</p>
+        </div>
+        <div class="ques">
+            <h3>Can I order in advance?</h3>
+            <p>We currently do not support this functionality. All our orders are placed and executed on-demand.</p>
+        </div>
+        <div class="ques">
+            <h3>Unable to view the details in my profile</h3>
+            <p>Please check if your app is due for an update. If not, please share the details via support@swiggy.in</p>
+        </div>
+        <div class="ques">
+            <h3>What is Swiggy Money?</h3>
+            <p>Swiggy Money is a secure digital wallet where you can store digital currency and use it for faster checkouts. It prevents payment failures and gives you seamless refunds when necessary.</p>
+        </div>
+        <div class="ques">
+            <h3>Did not receive referral coupon?</h3>
+            <p>Referral coupon is given upon the first successful transaction of the referred person. If you still have not received it, kindly send us your details at support@swiggy.in. We will contact you within 48 hours.</p>
+        </div>
+    </div>
+    <div class="ask-help">
+        <h3>Ask for Help</h3>
+        <form>
+            <input type="text" id="nameInput" placeholder="Your Name" required>
+            <input type="email" id="emailInput" placeholder="Your Email" required>
+            <textarea id="queryInput" rows="5" placeholder="Your Question" required></textarea>
+            <button type="button" id="submitButton">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var nameInput = document.getElementById('nameInput');
+            var emailInput = document.getElementById('emailInput');
+            var queryInput = document.getElementById('queryInput');
+            var submitButton = document.getElementById('submitButton');
+
+            function checkInputs() {
+                if (nameInput.value.trim() !== "" && emailInput.value.trim() !== "" && queryInput.value.trim() !== "") {
+                    submitButton.style.display = "block";
+                } else {
+                    submitButton.style.display = "none";
+                }
+            }
+
+            nameInput.addEventListener('input', checkInputs);
+            emailInput.addEventListener('input', checkInputs);
+            queryInput.addEventListener('input', checkInputs);
+
+            function displayHelpMessage() {
+                var messageDiv = document.createElement("div");
+                messageDiv.classList.add("message");
+                messageDiv.innerHTML = "Thank you for reaching out! We will get back to you shortly.";
+                document.querySelector('.ask-help').appendChild(messageDiv);
+            }
+
+            submitButton.addEventListener('click', displayHelpMessage);
+
+            submitButton.style.display = "none";
+        });
+    </script>
+</body>
+</html>

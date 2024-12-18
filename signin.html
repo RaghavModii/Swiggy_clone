@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Clone - Login</title>
+    <link rel="icon" href="Pictures/icon.jpg">
+    <link rel="stylesheet" href="Signin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <img src="Pictures/swiggy.png" alt="Swiggy Logo" class="logo">
+            <h2>Login!</h2>
+            <form>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" placeholder="Enter your name" maxlength="50">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-phone-alt"></i>
+                    <input type="tel" id="number" placeholder="Enter your mobile number" maxlength="10">
+                </div>
+                <button type="button" onclick="redirectToAnotherPage()">Get OTP</button>
+            </form>
+            <p class="terms">By continuing, you agree to our <a href="#" class="link">Terms & Conditions</a> and <a href="#" class="link">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+
+<script>
+    function redirectToAnotherPage() {
+    var name = document.getElementById("name").value;
+    var number = document.getElementById("number").value;
+
+    if (number.trim() !== "" && name.trim() !== "") {
+        if (number.length === 10) {
+            localStorage.setItem("user_name", name);
+            window.location.href = 'otp.html';
+        } else {
+            alert("Please enter a valid 10-digit mobile number.");
+        }
+    } else {
+        alert("Please fill in both name and mobile number fields.");
+    }
+}
+
+</script>
+</html>

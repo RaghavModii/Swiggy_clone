@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#logo img {
+    width: 100px;
+}
+
+#addr ul {
+    padding: 0;
+    margin: 0;
+    font-weight: bolder;
+    color: #333;
+}
+
+#ulid {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ulid li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+#ulid li a:hover {
+    color: #f7800a;
+}
+
+.cart {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.sub-heading {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.heading {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place-order-btn {
+    background-color: #f68325;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.place-order-btn:hover {
+    background-color: #de6026;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+footer a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
